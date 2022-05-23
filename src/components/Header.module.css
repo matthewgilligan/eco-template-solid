@@ -1,0 +1,23 @@
+header {
+  background: pink;
+}
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav {
+  margin: auto 0;
+}
+
+nav > a {
+  margin-left: 20px;
+}
+
+nav > a:first-of-type {
+  margin-left: 0;
+}
