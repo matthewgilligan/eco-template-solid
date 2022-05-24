@@ -1,4 +1,4 @@
-import { NavLink } from 'solid-app-router';
+import { Link, NavLink } from 'solid-app-router';
 
 import styles from './Header.module.css';
 
@@ -7,9 +7,9 @@ export default function Header() {
     <header>
       <div class={styles.wrap}>
         <div class={styles.title}>
-          <NavLink href='/'>
+          <Link href='/'>
             <h1>ECO</h1>
-          </NavLink>
+          </Link>
         </div>
 
         <nav>
