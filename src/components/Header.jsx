@@ -1,6 +1,6 @@
 import { Link, NavLink } from 'solid-app-router';
 
-import darkmode from './../utils/darkmode';
+import { ToggleClass } from '../utils/accessibility';
 
 import './Header.css';
 
@@ -19,7 +19,13 @@ export default function Header() {
           <NavLink href='/works'>Works</NavLink>
         </nav>
 
-        <button onClick={darkmode}>Turn blue</button>
+        <button onClick={() => ToggleClass('darkmode')}>Toggle Darkmode</button>
+        <button onClick={() => ToggleClass('high-contrast')}>
+          Toggle High Contrast
+        </button>
+        <button onClick={() => ToggleClass('grayscale')}>
+          Toggle Grayscale
+        </button>
       </div>
     </header>
   );
