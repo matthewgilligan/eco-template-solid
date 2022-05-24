@@ -1,7 +1,9 @@
-export default function About() {
+import Layout from './../components/Layout';
+
+export default function Works() {
   return (
-    <div>
+    <Layout>
       <h1>Works</h1>
-    </div>
+    </Layout>
   );
 }
