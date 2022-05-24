@@ -1,12 +1,14 @@
 import { Link, NavLink } from 'solid-app-router';
 
-import styles from './Header.module.css';
+import darkmode from './../utils/darkmode';
+
+import './Header.css';
 
 export default function Header() {
   return (
     <header>
-      <div class={styles.wrap}>
-        <div class={styles.title}>
+      <div class='page-flex-wrap'>
+        <div>
           <Link href='/'>
             <h1>ECO</h1>
           </Link>
@@ -16,6 +18,8 @@ export default function Header() {
           <NavLink href='/about'>About</NavLink>
           <NavLink href='/works'>Works</NavLink>
         </nav>
+
+        <button onClick={darkmode}>Turn blue</button>
       </div>
     </header>
   );

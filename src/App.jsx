@@ -11,16 +11,17 @@ const Works = lazy(() => import('./pages/Works'));
 function App() {
   return (
     <div class='App'>
-      <div className='content'>
-        <Header />
+      <Header />
+
+      <main className='page-wrap'>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/works' element={<Works />} />
         </Routes>
+      </main>
 
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 }
