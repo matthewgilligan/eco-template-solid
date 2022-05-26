@@ -1,11 +1,22 @@
-export const ToggleClass = (className) => {
+export const ToggleBodyClass = (className) => {
   document.body.classList.toggle(className);
 };
 
-// export const HighContrast = () => {
-//   document.body.classList.toggle('high-contrast');
-// };
+export const AdjustFontSize = (operation) => {
+  console.log(operation);
 
-// export const Grayscale = () => {
-//   document.body.classList.toggle('grayscale');
-// };
+  const txt = document.documentElement;
+
+  const style = window
+    .getComputedStyle(txt, null)
+    .getPropertyValue('font-size');
+
+  const currentSize = parseFloat(style);
+  console.log(currentSize);
+
+  if (operation === 'add') {
+    txt.style.fontSize = currentSize + 1 + 'px';
+  } else {
+    txt.style.fontSize = currentSize - 1 + 'px';
+  }
+};
