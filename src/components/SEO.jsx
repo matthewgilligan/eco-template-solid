@@ -4,11 +4,11 @@ import { useLocation } from 'solid-app-router';
 export default function SEO({ title, description, image, type }) {
   const { pathname } = useLocation();
 
-  const siteUrl = 'https://google.com';
+  const siteUrl = 'https://google.com/';
 
   const seo = {
     title: title || 'Eco Template',
-    description: description,
+    description: description || 'Sustainable and accessible website template',
     image: `${siteUrl}${image}`,
     url: `${siteUrl}${pathname}`,
     type: type || 'website',
@@ -17,7 +17,7 @@ export default function SEO({ title, description, image, type }) {
 
   return (
     <>
-      <Title>{title}</Title>
+      <Title>{seo.title}</Title>
       <Meta name='description' content={seo.description} />
       <Meta name='image' content={seo.image} />
       <Meta property='og:url' content={seo.url} />

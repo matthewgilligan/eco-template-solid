@@ -1,6 +1,10 @@
 import { Link, NavLink } from 'solid-app-router';
 
-import { ToggleBodyClass, AdjustFontSize } from '../utils/accessibility';
+import {
+  ToggleBodyClass,
+  AdjustFontSize,
+  ResetFontSize,
+} from '../utils/accessibility';
 
 import './Header.css';
 
@@ -34,6 +38,10 @@ export default function Header() {
             <button onClick={() => AdjustFontSize('add')}>
               Increase Font Size
             </button>
+            <button onClick={() => AdjustFontSize('subtract')}>
+              Decrease Font Size
+            </button>
+            <button onClick={() => ResetFontSize()}>Reset Font Size</button>
           </div>
         </div>
       </div>

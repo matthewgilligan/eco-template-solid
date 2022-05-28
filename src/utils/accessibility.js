@@ -3,8 +3,6 @@ export const ToggleBodyClass = (className) => {
 };
 
 export const AdjustFontSize = (operation) => {
-  console.log(operation);
-
   const txt = document.documentElement;
 
   const style = window
@@ -19,4 +17,8 @@ export const AdjustFontSize = (operation) => {
   } else {
     txt.style.fontSize = currentSize - 1 + 'px';
   }
+};
+
+export const ResetFontSize = () => {
+  document.documentElement.style.fontSize = '10px';
 };

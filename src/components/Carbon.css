@@ -1,6 +1,9 @@
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: green;
+.bubble {
+  display: grid;
+  place-content: center;
+  background-color: black;
+  color: white;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
 }

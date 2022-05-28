@@ -1,5 +1,6 @@
 import { MetaProvider } from 'solid-meta';
 
+import Carbon from './../components/Carbon';
 import SEO from './../components/SEO';
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <MetaProvider>
       <SEO title='Home' />
       <h1>Home</h1>
+      <Carbon />
     </MetaProvider>
   );
 }
