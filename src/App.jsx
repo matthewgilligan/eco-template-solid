@@ -1,29 +1,26 @@
-import { lazy } from 'solid-js';
-import { Routes, Route } from 'solid-app-router';
+import { useRoutes, Router } from 'solid-app-router';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-const Home = lazy(() => import('./pages/Home'));
-const About = lazy(() => import('./pages/About'));
-const Works = lazy(() => import('./pages/Works'));
+import { routes } from './routes';
 
-function App() {
+export const App = () => {
+  const Routes = useRoutes(routes);
+
   return (
-    <div class='App'>
-      <Header />
+    <Router>
+      <div class='App'>
+        <Header />
 
-      <main className='page-wrap'>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/works' element={<Works />} />
-        </Routes>
-      </main>
+        <main className='page-wrap'>
+          <Routes />
+        </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;

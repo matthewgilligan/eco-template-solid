@@ -1,7 +1,12 @@
+import { MetaProvider } from 'solid-meta';
+
+import SEO from './../components/SEO';
+
 export default function Works() {
   return (
-    <div>
+    <MetaProvider>
+      <SEO title='Works' />
       <h1>Works</h1>
-    </div>
+    </MetaProvider>
   );
 }

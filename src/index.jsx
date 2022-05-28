@@ -1,14 +1,7 @@
-import { render } from 'solid-js/web';
-import { Router } from 'solid-app-router';
+import { createApp } from 'solid-utils';
+import { MetaProvider } from 'solid-meta';
 
+import { App } from './App';
 import './styles/index.css';
-import App from './App';
 
-render(
-  () => (
-    <Router>
-      <App />
-    </Router>
-  ),
-  document.getElementById('app')
-);
+createApp(App).use(MetaProvider).mount('#app');
