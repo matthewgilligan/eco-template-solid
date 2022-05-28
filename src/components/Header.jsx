@@ -26,6 +26,13 @@ export default function Header() {
         <div class='dropdown'>
           <button class='dropbtn'>Accessibility Controls</button>
           <div class='dropdown-content'>
+            <button onClick={() => AdjustFontSize('add')}>
+              Increase Font Size
+            </button>
+            <button onClick={() => AdjustFontSize('subtract')}>
+              Decrease Font Size
+            </button>
+            <button onClick={() => ResetFontSize()}>Reset Font Size</button>
             <button onClick={() => ToggleBodyClass('darkmode')}>
               Toggle Darkmode
             </button>
@@ -35,13 +42,6 @@ export default function Header() {
             <button onClick={() => ToggleBodyClass('grayscale')}>
               Toggle Grayscale
             </button>
-            <button onClick={() => AdjustFontSize('add')}>
-              Increase Font Size
-            </button>
-            <button onClick={() => AdjustFontSize('subtract')}>
-              Decrease Font Size
-            </button>
-            <button onClick={() => ResetFontSize()}>Reset Font Size</button>
           </div>
         </div>
       </div>

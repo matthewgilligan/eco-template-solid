@@ -1,7 +1,7 @@
 .bubble {
   display: grid;
   place-content: center;
-  background-color: black;
+  background-color: blue;
   color: white;
   width: 20rem;
   height: 20rem;
