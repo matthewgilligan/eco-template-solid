@@ -11,7 +11,6 @@ import './Header.css';
 
 export default function Header() {
   const [carbonIntensity, setCarbonIntensity] = useCarbonIntensity();
-  <h3>{carbonIntensity().forecast}</h3>;
   return (
     <header>
       <div class='page-flex-wrap'>
