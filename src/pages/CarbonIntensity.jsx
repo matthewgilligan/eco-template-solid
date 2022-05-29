@@ -2,11 +2,11 @@ import { MetaProvider } from 'solid-meta';
 
 import SEO from './../components/SEO';
 
-export default function About() {
+export default function CarbonIntensity() {
   return (
     <MetaProvider>
-      <SEO title='About' />
-      <h1>About</h1>
+      <SEO title='Carbon Intensity' />
+      <h1>Carbon Intensity</h1>
     </MetaProvider>
   );
 }

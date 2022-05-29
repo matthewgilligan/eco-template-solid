@@ -23,6 +23,20 @@ nav > a:first-of-type {
   margin-left: 0;
 }
 
+.secondary-nav {
+  display: flex;
+}
+
+.secondary-nav a {
+  color: white;
+  margin: auto 0;
+  font-size: 1.6rem;
+}
+
+.secondary-nav span {
+  text-transform: capitalize;
+}
+
 /* DROPDOWN STYLING */
 
 .dropbtn {
@@ -32,7 +46,7 @@ nav > a:first-of-type {
   color: white;
   border: none;
   background-color: var(--primary-color);
-  font-size: 16px;
+  font-size: 1.6rem;
   cursor: pointer;
 }
 
