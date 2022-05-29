@@ -1,34 +1,28 @@
-import { createResource } from 'solid-js';
+import { createResource, createEffect } from 'solid-js';
 import { useRoutes, Router } from 'solid-app-router';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
+import { useCarbonIntensity } from './context/carbonIntensity';
 import { fetchCarbonIntensity } from './utils/carbonIntensity';
 
 import { routes } from './routes';
 
 export const App = () => {
   const Routes = useRoutes(routes);
+  const [carbonIntensity, setCarbonIntensity] = useCarbonIntensity();
   const [fetchedCarbonIntensity] = createResource(fetchCarbonIntensity);
+
+  createEffect(() => {
+    if (!fetchedCarbonIntensity.loading) {
+      setCarbonIntensity(fetchedCarbonIntensity().data.data[0].intensity);
+    }
+  });
 
   return (
     <Router>
       <div class='App'>
         <Header />
-
-        <Switch fallback={<p>{x()} is between 5 and 10</p>}>
-          <Match when={fetchedCarbonIntensity.loading}>
-            <p>Lodaing</p>
-          </Match>
-          <Match when={fetchedCarbonIntensity.error}>
-            <p class='relative text-red-600'>{quote.error.message}</p>
-          </Match>
-          <Match when={fetchedCarbonIntensity()}>
-            <p class='relative'>
-              {fetchedCarbonIntensity().data.data[0].intensity.index}
-            </p>
-          </Match>
-        </Switch>
 
         <main className='page-wrap'>
           <Routes />

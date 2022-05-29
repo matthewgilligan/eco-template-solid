@@ -4,7 +4,7 @@ const CarbonIntensityContext = createContext();
 
 export function CarbonIntensityProvider(props) {
   const [carbonIntensity, setCarbonIntensity] = createSignal({
-      index: 'moderate',
+      index: 'high',
       forecast: 140,
     }),
     store = [carbonIntensity, setCarbonIntensity];
